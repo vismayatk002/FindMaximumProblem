@@ -17,6 +17,11 @@ public class FindMaximum implements MaxOperation
         float maxFloatValue = find.findMaxFloat(floatObj1, floatObj2, floatObj3);
         System.out.println("Float Maximum : " + maxFloatValue);
         
+        String stringObj1 = String.valueOf("Apple");
+        String stringObj2 = String.valueOf("Pineapple");
+        String stringObj3 = String.valueOf("Orange");
+        String maxStringValue = find.findMaxString(stringObj1, stringObj2, stringObj3);
+        System.out.println("String Maximum : " + maxStringValue);
     }
     public int findMaxInt(Integer intObj1, Integer intObj2, Integer intObj3) {
     	
@@ -51,6 +56,23 @@ public class FindMaximum implements MaxOperation
     		maxFloatValue = floatObj3;
     	}
     	return (float)maxFloatValue;
+    }
+    public String findMaxString(String stringObj1, String stringObj2, String stringObj3) {
+    	
+    	String maxStringValue;
+    	int result1 =  stringObj1.compareTo(stringObj2);
+    	int result2 =  stringObj1.compareTo(stringObj3);
+    	int result3 =  stringObj2.compareTo(stringObj3);
+    	if(result1 > 0 && result2 > 0) {
+    		maxStringValue = stringObj1;
+    	}
+    	else if(result3 > 0 && result1 < 0) {
+    		maxStringValue = stringObj2;
+    	}
+    	else{
+    		maxStringValue = stringObj3;
+    	}
+    	return maxStringValue;
     }
 }
 
