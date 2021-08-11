@@ -8,8 +8,7 @@ public class FindMaximum<T extends Comparable<T>>
 
 	ArrayList<T> list = new ArrayList<T>();  
 	//contructor accept multiple arguments 
-	FindMaximum(T... inputs){
-		
+	FindMaximum(T... inputs){		
 		for (T value : inputs){
 	      this.list.add(value);
 	    }
@@ -17,16 +16,22 @@ public class FindMaximum<T extends Comparable<T>>
 	public T testMaximum() {
 		return FindMaximum.testMaximum(list);
 	}
-	public static <T extends Comparable<T>> T testMaximum(ArrayList<T> list) {
-    	
+	public static <T extends Comparable<T>> T testMaximum(ArrayList<T> list) {    	
 		// Sort the list in ascending order
 		Collections.sort(list);
     	
 		// last position holds the max value
 		T maxValue = list.get(list.size() - 1);
-		System.out.println("Maximum : " + maxValue);
+		showMaxValue(list,maxValue);
     	return maxValue;
     }
+	public static <T> void showMaxValue(ArrayList<T> list,T maxValue) {	
+		System.out.println("\nInput values : ");
+		for (T value : list){
+			System.out.print(value +" , ");
+	    }
+		System.out.println("\nMaximum : " + maxValue);
+	}
     public static void main( String[] args )
     {
     	
@@ -39,6 +44,4 @@ public class FindMaximum<T extends Comparable<T>>
         new FindMaximum(stringValue1, stringValue2, stringValue3).testMaximum();
     }
 }
-        
-        
-//        
+              
