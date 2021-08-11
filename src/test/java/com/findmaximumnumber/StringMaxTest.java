@@ -16,7 +16,7 @@ public class StringMaxTest
 	public void findMaxTC1() {
     	String stringValue1 = "Mango" , stringValue2 = "PineApple" , stringValue3 = "Orange";    	
     	FindMaximum find = new FindMaximum(stringValue1, stringValue2, stringValue3);
-    	String maxStringValue = (String) find.findMax(); 
+    	String maxStringValue = (String) find.testMaximum(); 
 		Assertions.assertEquals("PineApple", maxStringValue);
 	}
 	@Test
@@ -24,7 +24,7 @@ public class StringMaxTest
 		
 		String stringValue1 = "Guava" , stringValue2 = "PineApple" , stringValue3 = "Orange";    	
     	FindMaximum find = new FindMaximum(stringValue1, stringValue2, stringValue3);
-    	String maxStringValue = (String) find.findMax(); 
+    	String maxStringValue = (String) find.testMaximum(); 
 		Assertions.assertEquals("PineApple", maxStringValue);
 		
 	}
@@ -32,7 +32,7 @@ public class StringMaxTest
 	public void findMaxTC3() {
 		String stringValue1 = "Guava" , stringValue2 = "Apple" , stringValue3 = "Pineapple";    	
     	FindMaximum find = new FindMaximum(stringValue1, stringValue2, stringValue3);
-    	String maxStringValue = (String) find.findMax(); 
+    	String maxStringValue = (String) find.testMaximum(); 
 		Assertions.assertEquals("Pineapple", maxStringValue);
 	}
 	

@@ -3,16 +3,16 @@ package com.findmaximumnumber;
 public class FindMaximum<T extends Comparable<T>>
 {
 	T input1, input2, input3;
-	
+	//contructor
 	FindMaximum(T input1, T input2, T input3){
 		this.input1 = input1; 
 		this.input2 = input2; 
 		this.input3 = input3; 
 	}
-	public T findMax() {
-		return FindMaximum.findMax(input1, input2, input3);
+	public T testMaximum() {
+		return FindMaximum.testMaximum(input1, input2, input3);
 	}
-	public static <T extends Comparable<T>> T findMax(T input1, T input2, T input3) {
+	public static <T extends Comparable<T>> T testMaximum(T input1, T input2, T input3) {
     	
 		//assume input1 is max
 		T maxValue = input1;
@@ -40,9 +40,9 @@ public class FindMaximum<T extends Comparable<T>>
         Float floatValue1 = 6.3f , floatValue2 = 3.0f , floatValue3 = 4.7f;
         String stringValue1 = "Mango" , stringValue2 = "PineApple" , stringValue3 = "Orange";
         
-        new FindMaximum(intValue1, intValue2, intValue3).findMax();
-        new FindMaximum(floatValue1, floatValue2, floatValue3).findMax();
-        new FindMaximum(stringValue1, stringValue2, stringValue3).findMax();
+        new FindMaximum(intValue1, intValue2, intValue3).testMaximum();
+        new FindMaximum(floatValue1, floatValue2, floatValue3).testMaximum();
+        new FindMaximum(stringValue1, stringValue2, stringValue3).testMaximum();
     }
 }
         
