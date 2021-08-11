@@ -8,25 +8,22 @@ public class FloatMaxTest {
 	@Test
     public void findMaxTC1()
     {
-		Float floatValue1 = 6.3f , floatValue2 = 2.5f , floatValue3 = 3.3f;    	
-    	FindMaximum find = new FindMaximum(floatValue1, floatValue2, floatValue3);
-    	Float maxFloatValue = (float) find.testMaximum(); 
-		Assertions.assertEquals(6.3f, maxFloatValue);
+		Float floatValue1 = 16.5f , floatValue2 = 12.7f , floatValue3 = 7.9f;   	
+		Float maxValue = FindMaximum.getMax(floatValue1, floatValue2, floatValue3); 
+		Assertions.assertEquals(16.5f, maxValue);
     }
 	@Test
     public void findMaxTC2()
     {
 		Float floatValue1 = 1.5f , floatValue2 = 12.7f , floatValue3 = 7.9f;    	
-    	FindMaximum find = new FindMaximum(floatValue1, floatValue2, floatValue3);
-    	Float maxFloatValue = (float) find.testMaximum(); 
-		Assertions.assertEquals(12.7f, maxFloatValue);
+		Float maxValue = FindMaximum.getMax(floatValue1, floatValue2, floatValue3); 
+		Assertions.assertEquals(12.7f, maxValue);
     }
 	@Test
     public void findMaxTC3()
     {
-		Float floatValue1 = 5.7f , floatValue2 = 1.5f , floatValue3 = 15.1f;    	
-    	FindMaximum find = new FindMaximum(floatValue1, floatValue2, floatValue3);
-    	Float maxFloatValue = (float) find.testMaximum(); 
-		Assertions.assertEquals(15.1f, maxFloatValue);
+		Float floatValue1 = 1.5f , floatValue2 = 12.7f , floatValue3 = 17.9f;    	
+		Float maxValue = FindMaximum.getMax(floatValue1, floatValue2, floatValue3); 
+		Assertions.assertEquals(17.9f, maxValue);
     }
 }
